@@ -1,0 +1,345 @@
+nohup: ignoring input
+[19:14:52] ========================================================================
+[19:14:52] BitNet b1.58 | audited YaRN 8K recipe
+[19:14:52] ========================================================================
+[19:14:52] Model init: microsoft/bitnet-b1.58-2B-4T-bf16
+[19:14:52] GPU       : NVIDIA RTX A6000
+[19:14:52] VRAM      : 50.9 GB
+[19:14:52] PyTorch   : 2.11.0+cu128
+[19:14:52] YaRN verified | band31 base_wl=3619.2 | band32 base_wl=4442.9 -> yarn_wl=8885.8
+[19:14:52] Zone 32-42 | factor=2.0 | edge_taper=False | bands 43+ untouched
+[19:14:52] Loading tokenizer...
+[19:14:53] Loading model...
+[19:14:57] RoPE patched in shared model.model.rotary_emb.
+[19:14:57] Streaming togethercomputer/RedPajama-Data-V2:default:train and building 3000 overlapping 8192-token windows (stride=4096)...
+[19:21:28] Windows ready | total=3000 | train=2850 | eval=150
+[19:21:28] Computing baseline PPL...
+[19:21:35] Baseline @ 2048: ppl=12.263 | loss=2.5066
+[19:21:42] Baseline @ 4096: ppl=11.452 | loss=2.4381
+[19:21:58] Baseline @ 8192: ppl=10.731 | loss=2.3732
+[19:21:58] \nEntering phase 1 | lr=1.00e-05 | frozen_sub_norm=[25, 26, 27, 28, 29] | tail_weight=1.05
+[19:21:58] Freeze mask applied | frozen=0.05M | trainable=2412.77M
+[19:21:59] step=    0 | phase=1 | seq=2048 | train_loss=0.0426 | lr_max=0.00e+00 | elapsed=0.0m
+[19:22:03]   eval @ 2048: ppl=12.263 | loss=2.5066
+[19:22:11]   eval @ 4096: ppl=11.452 | loss=2.4381
+[19:22:27]   eval @ 8192: ppl=10.731 | loss=2.3732
+[19:23:34] step=   50 | phase=1 | seq=2048 | train_loss=2.4266 | lr_max=4.00e-07 | elapsed=1.6m
+[19:24:42] step=  100 | phase=1 | seq=4096 | train_loss=2.5288 | lr_max=8.00e-07 | elapsed=2.7m
+[19:24:46]   eval @ 2048: ppl=12.265 | loss=2.5067
+[19:24:55]   eval @ 4096: ppl=11.449 | loss=2.4379
+[19:25:11]   eval @ 8192: ppl=10.731 | loss=2.3731
+[19:26:17] step=  150 | phase=1 | seq=4096 | train_loss=2.4145 | lr_max=1.20e-06 | elapsed=4.3m
+[19:27:26] step=  200 | phase=1 | seq=4096 | train_loss=2.4271 | lr_max=1.67e-06 | elapsed=5.5m
+[19:27:30]   eval @ 2048: ppl=12.267 | loss=2.5069
+[19:27:38]   eval @ 4096: ppl=11.455 | loss=2.4384
+[19:27:55]   eval @ 8192: ppl=10.731 | loss=2.3731
+[19:29:04] step=  250 | phase=1 | seq=2048 | train_loss=2.3530 | lr_max=2.07e-06 | elapsed=7.1m
+[19:30:15] step=  300 | phase=1 | seq=2048 | train_loss=2.4034 | lr_max=2.47e-06 | elapsed=8.3m
+[19:30:19]   eval @ 2048: ppl=12.262 | loss=2.5065
+[19:30:27]   eval @ 4096: ppl=11.450 | loss=2.4380
+[19:30:44]   eval @ 8192: ppl=10.731 | loss=2.3731
+[19:31:56] step=  350 | phase=1 | seq=4096 | train_loss=2.3521 | lr_max=2.87e-06 | elapsed=10.0m
+[19:33:09] step=  400 | phase=1 | seq=4096 | train_loss=2.4427 | lr_max=3.33e-06 | elapsed=11.2m
+[19:33:13]   eval @ 2048: ppl=12.260 | loss=2.5063
+[19:33:21]   eval @ 4096: ppl=11.447 | loss=2.4377
+[19:33:37]   eval @ 8192: ppl=10.728 | loss=2.3729
+[19:34:43] step=  450 | phase=1 | seq=2048 | train_loss=2.4229 | lr_max=3.73e-06 | elapsed=12.8m
+[19:36:00] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_00500
+[19:36:01] step=  500 | phase=1 | seq=2048 | train_loss=2.3472 | lr_max=4.13e-06 | elapsed=14.1m
+[19:36:05]   eval @ 2048: ppl=12.258 | loss=2.5062
+[19:36:13]   eval @ 4096: ppl=11.448 | loss=2.4378
+[19:36:30]   eval @ 8192: ppl=10.729 | loss=2.3730
+[19:37:41] step=  550 | phase=1 | seq=4096 | train_loss=2.3885 | lr_max=4.53e-06 | elapsed=15.7m
+[19:38:49] step=  600 | phase=1 | seq=4096 | train_loss=2.3986 | lr_max=5.00e-06 | elapsed=16.8m
+[19:38:53]   eval @ 2048: ppl=12.263 | loss=2.5066
+[19:39:01]   eval @ 4096: ppl=11.449 | loss=2.4379
+[19:39:18]   eval @ 8192: ppl=10.728 | loss=2.3729
+[19:40:27] step=  650 | phase=1 | seq=4096 | train_loss=2.3570 | lr_max=5.40e-06 | elapsed=18.5m
+[19:41:37] step=  700 | phase=1 | seq=4096 | train_loss=2.4171 | lr_max=5.80e-06 | elapsed=19.6m
+[19:41:41]   eval @ 2048: ppl=12.251 | loss=2.5056
+[19:41:49]   eval @ 4096: ppl=11.440 | loss=2.4371
+[19:42:06]   eval @ 8192: ppl=10.724 | loss=2.3725
+[19:43:15] step=  750 | phase=1 | seq=4096 | train_loss=2.4765 | lr_max=6.20e-06 | elapsed=21.3m
+[19:44:24] step=  800 | phase=1 | seq=2048 | train_loss=2.4476 | lr_max=6.67e-06 | elapsed=22.4m
+[19:44:28]   eval @ 2048: ppl=12.249 | loss=2.5054
+[19:44:36]   eval @ 4096: ppl=11.442 | loss=2.4373
+[19:44:53]   eval @ 8192: ppl=10.721 | loss=2.3722
+[19:45:58] step=  850 | phase=1 | seq=4096 | train_loss=2.4962 | lr_max=7.07e-06 | elapsed=24.0m
+[19:47:11] step=  900 | phase=1 | seq=4096 | train_loss=2.4770 | lr_max=7.47e-06 | elapsed=25.2m
+[19:47:15]   eval @ 2048: ppl=12.247 | loss=2.5053
+[19:47:23]   eval @ 4096: ppl=11.437 | loss=2.4368
+[19:47:40]   eval @ 8192: ppl=10.719 | loss=2.3720
+[19:48:54] step=  950 | phase=1 | seq=4096 | train_loss=2.3908 | lr_max=7.87e-06 | elapsed=26.9m
+[19:50:12] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_01000
+[19:50:12] step= 1000 | phase=1 | seq=2048 | train_loss=2.2509 | lr_max=8.33e-06 | elapsed=28.2m
+[19:50:16]   eval @ 2048: ppl=12.239 | loss=2.5046
+[19:50:24]   eval @ 4096: ppl=11.431 | loss=2.4363
+[19:50:41]   eval @ 8192: ppl=10.713 | loss=2.3715
+[19:51:53] step= 1050 | phase=1 | seq=4096 | train_loss=2.5019 | lr_max=8.73e-06 | elapsed=29.9m
+[19:53:04] step= 1100 | phase=1 | seq=4096 | train_loss=2.3154 | lr_max=9.13e-06 | elapsed=31.1m
+[19:53:08]   eval @ 2048: ppl=12.231 | loss=2.5039
+[19:53:16]   eval @ 4096: ppl=11.424 | loss=2.4357
+[19:53:33]   eval @ 8192: ppl=10.711 | loss=2.3713
+[19:54:39] step= 1150 | phase=1 | seq=4096 | train_loss=2.4933 | lr_max=9.53e-06 | elapsed=32.7m
+[19:55:47] step= 1200 | phase=1 | seq=6144 | train_loss=2.4799 | lr_max=1.00e-05 | elapsed=33.8m
+[19:55:52]   eval @ 2048: ppl=12.237 | loss=2.5045
+[19:56:00]   eval @ 4096: ppl=11.428 | loss=2.4360
+[19:56:16]   eval @ 8192: ppl=10.706 | loss=2.3708
+[19:58:05] step= 1250 | phase=1 | seq=8192 | train_loss=2.4725 | lr_max=1.00e-05 | elapsed=36.1m
+[19:59:58] step= 1300 | phase=1 | seq=4096 | train_loss=2.3230 | lr_max=1.00e-05 | elapsed=38.0m
+[20:00:02]   eval @ 2048: ppl=12.232 | loss=2.5040
+[20:00:11]   eval @ 4096: ppl=11.422 | loss=2.4356
+[20:00:27]   eval @ 8192: ppl=10.702 | loss=2.3704
+[20:02:33] step= 1350 | 
+phase=1 | seq=4096 | train_loss=2.3281 | lr_max=1.00e-05 | elapsed=40.6m
+[20:04:33] step= 1400 | phase=1 | seq=8192 | train_loss=2.4132 | lr_max=9.99e-06 | elapsed=42.6m
+[20:04:37]   eval @ 2048: ppl=12.227 | loss=2.5036
+[20:04:45]   eval @ 4096: ppl=11.417 | loss=2.4351
+[20:05:02]   eval @ 8192: ppl=10.695 | loss=2.3697
+[20:07:04] step= 1450 | phase=1 | seq=6144 | train_loss=2.3695 | lr_max=9.99e-06 | elapsed=45.1m
+[20:09:24] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_01500
+[20:09:24] \nEntering phase 2 | lr=7.00e-06 | frozen_sub_norm=[25, 26] | tail_weight=1.15
+[20:09:24] Freeze mask applied | frozen=0.02M | trainable=2412.80M
+[20:09:26] step= 1500 | phase=2 | seq=4096 | train_loss=2.4160 | lr_max=0.00e+00 | elapsed=47.5m
+[20:09:30]   eval @ 2048: ppl=12.224 | loss=2.5034
+[20:09:37]   eval @ 4096: ppl=11.414 | loss=2.4349
+[20:09:54]   eval @ 8192: ppl=10.692 | loss=2.3695
+[20:12:02] step= 1550 | phase=2 | seq=4096 | train_loss=2.3585 | lr_max=2.41e-07 | elapsed=50.1m
+[20:13:51] step= 1600 | phase=2 | seq=2048 | train_loss=2.5070 | lr_max=4.83e-07 | elapsed=51.9m
+[20:13:55]   eval @ 2048: ppl=12.224 | loss=2.5034
+[20:14:03]   eval @ 4096: ppl=11.413 | loss=2.4347
+[20:14:20]   eval @ 8192: ppl=10.693 | loss=2.3696
+[20:16:17] step= 1650 | phase=2 | seq=8192 | train_loss=2.1380 | lr_max=7.24e-07 | elapsed=54.3m
+[20:18:20] step= 1700 | phase=2 | seq=8192 | train_loss=2.3503 | lr_max=1.01e-06 | elapsed=56.4m
+[20:18:24]   eval @ 2048: ppl=12.223 | loss=2.5033
+[20:18:32]   eval @ 4096: ppl=11.412 | loss=2.4347
+[20:18:48]   eval @ 8192: ppl=10.692 | loss=2.3695
+[20:20:48] step= 1750 | phase=2 | seq=4096 | train_loss=2.3700 | lr_max=1.25e-06 | elapsed=58.8m
+[20:22:45] step= 1800 | phase=2 | seq=6144 | train_loss=2.2215 | lr_max=1.49e-06 | elapsed=60.8m
+[20:22:49]   eval @ 2048: ppl=12.223 | loss=2.5033
+[20:22:57]   eval @ 4096: ppl=11.411 | loss=2.4345
+[20:23:14]   eval @ 8192: ppl=10.694 | loss=2.3697
+[20:25:13] step= 1850 | phase=2 | seq=4096 | train_loss=2.4962 | lr_max=1.73e-06 | elapsed=63.3m
+[20:27:06] step= 1900 | phase=2 | seq=4096 | train_loss=2.3487 | lr_max=2.01e-06 | elapsed=65.1m
+[20:27:10]   eval @ 2048: ppl=12.223 | loss=2.5033
+[20:27:18]   eval @ 4096: ppl=11.415 | loss=2.4349
+[20:27:35]   eval @ 8192: ppl=10.692 | loss=2.3695
+[20:29:15] step= 1950 | phase=2 | seq=4096 | train_loss=2.4593 | lr_max=2.25e-06 | elapsed=67.3m
+[20:31:21] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_02000
+[20:31:24] step= 2000 | phase=2 | seq=8192 | train_loss=2.4021 | lr_max=2.50e-06 | elapsed=69.4m
+[20:31:28]   eval @ 2048: ppl=12.227 | loss=2.5036
+[20:31:36]   eval @ 4096: ppl=11.412 | loss=2.4347
+[20:31:53]   eval @ 8192: ppl=10.689 | loss=2.3693
+[20:33:58] step= 2050 | phase=2 | seq=4096 | train_loss=2.5042 | lr_max=2.74e-06 | elapsed=72.0m
+[20:36:00] step= 2100 | phase=2 | seq=8192 | train_loss=2.4443 | lr_max=3.02e-06 | elapsed=74.0m
+[20:36:04]   eval @ 2048: ppl=12.228 | loss=2.5037
+[20:36:12]   eval @ 4096: ppl=11.414 | loss=2.4348
+[20:36:29]   eval @ 8192: ppl=10.691 | loss=2.3694
+[20:38:33] step= 2150 | phase=2 | seq=4096 | train_loss=2.4011 | lr_max=3.26e-06 | elapsed=76.6m
+[20:40:29] step= 2200 | phase=2 | seq=6144 | train_loss=2.3081 | lr_max=3.50e-06 | elapsed=78.5m
+[20:40:33]   eval @ 2048: ppl=12.220 | loss=2.5031
+[20:40:42]   eval @ 4096: ppl=11.409 | loss=2.4344
+[20:40:58]   eval @ 8192: ppl=10.693 | loss=2.3696
+[20:42:45] step= 2250 | phase=2 | seq=8192 | train_loss=2.3091 | lr_max=3.74e-06 | elapsed=80.8m
+[20:44:46] step= 2300 | phase=2 | seq=8192 | train_loss=2.2494 | lr_max=4.02e-06 | elapsed=82.8m
+[20:44:50]   eval @ 2048: ppl=12.218 | loss=2.5029
+[20:44:58]   eval @ 4096: ppl=11.410 | loss=2.4345
+[20:45:15]   eval @ 8192: ppl=10.693 | loss=2.3696
+[20:47:04] step= 2350 | phase=2 | seq=4096 | train_loss=2.4781 | lr_max=4.27e-06 | elapsed=85.1m
+[20:49:11] step= 2400 | phase=2 | seq=6144 | train_loss=2.3992 | lr_max=4.51e-06 | elapsed=87.2m
+[20:49:15]   eval @ 2048: ppl=12.226 | loss=2.5035
+[20:49:24]   eval @ 4096: ppl=11.412 | loss=2.4347
+[20:49:40]   eval @ 8192: ppl=10.689 | loss=2.3692
+[20:51:39] step= 2450 | phase=2 | seq=4096 | train_loss=2.4464 | lr_max=4.75e-06 | elapsed=89.7m
+[20:53:47] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_02500
+[20:53:49] step= 2500 | phase=2 | seq=6144 | train_loss=2.4099 | lr_max=5.03e-06 | elapsed=91.8m
+[20:53:53]   eval @ 2048: ppl=12.221 | loss=2.5032
+[20:54:01]   eval @ 4096: ppl=11.408 | loss=2.4343
+[20:54:17]   eval @ 8192: ppl=10.690 | loss=2.3693
+[20:56:08] step= 2550 | phase=2 | seq=4096 | train_loss=2.4093 | lr_max=5.27e-06 | elapsed=94.2m
+[20:58:05] step= 2600 | phase=2 | seq=8192 | train_loss=2.5180 | lr_max=5.51e-06 | elapsed=96.1m
+[20:58:09]   eval @ 2048: ppl=12.215 | loss=2.5027
+[20:58:18]   eval @ 4096: ppl=11.408 | loss=2.4343
+[20:58:34]   eval @ 8192: ppl=10.688 | loss=2.3691
+[21:00:25] step= 2650 | phase=2 | seq=6144 | train_loss=2.3914 | lr_max=5.76e-06 | elapsed=98.4m
+[21:02:25] step= 2700 | phase=2 | seq=4096 | train_loss=2.4160 | lr_max=6.04e-06 | elapsed=100.4m
+[21:02:29]   eval @ 2048: ppl=12.216 | loss=2.5027
+[21:02:37]   eval @ 4096: ppl=11.408 | loss=2.4343
+[21:02:54]   eval @ 8192: ppl=10.689 | loss=2.3692
+[21:04:52] step= 2750 | phase=2 | seq=6144 | train_loss=2.3844 | lr_max=6.28e-06 | elapsed=102.9m
+[21:06:37] step= 2800 | phase=2 | seq=6144 | train_loss=2.4164 | lr_max=6.52e-06 | elapsed=104.6m
+[21:06:41]   eval @ 2048: ppl=12.212 | loss=2.5024
+[21:06:49]   eval @ 4096: ppl=11.404 | loss=2.4339
+[21:07:06]   eval @ 8192: ppl=10.686 | loss=2.3689
+[21:09:08] step= 2850 | phase=2 | seq=6144 | train_loss=2.4382 | lr_max=6.76e-06 | elapsed=107.2m
+[21:11:03] step= 2900 | phase=2 | seq=8192 | train_loss=2.2869 | lr_max=7.04e-06 | elapsed=109.1m
+[21:11:07]   eval @ 2048: ppl=12.210 | loss=2.5023
+[21:11:16]   eval @ 4096: ppl=11.403 | loss=2.4339
+[21:11:32]   eval @ 8192: ppl=10.686 | loss=2.3689
+[21:13:30] step= 2950 | phase=2 | seq=6144 | train_loss=2.2397 | lr_max=7.29e-06 | elapsed=111.5m
+[21:15:23] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_03000
+[21:15:26] step= 3000 | phase=2 | seq=6144 | train_loss=2.4276 | lr_max=7.53e-06 | elapsed=113.5m
+[21:15:30]   eval @ 2048: ppl=12.215 | loss=2.5027
+[21:15:38]   eval @ 4096: ppl=11.402 | loss=2.4338
+[21:15:54]   eval @ 8192: ppl=10.685 | loss=2.3689
+[21:17:41] step= 3050 | phase=2 | seq=8192 | train_loss=2.4877 | lr_max=7.77e-06 | elapsed=115.7m
+[21:19:46] step= 3100 | phase=2 | seq=8192 | train_loss=2.3847 | lr_max=8.05e-06 | elapsed=117.8m
+[21:19:50]   eval @ 2048: ppl=12.213 | loss=2.5025
+[21:19:58]   eval @ 4096: ppl=11.403 | loss=2.4338
+[21:20:15]   eval @ 8192: ppl=10.684 | loss=2.3687
+[21:22:11] step= 3150 | phase=2 | seq=8192 | train_loss=2.3142 | lr_max=8.05e-06 | elapsed=120.2m[21:24:13] step= 3200 | phase=2 | seq=8192 | train_loss=2.2088 | lr_max=8.05e-06 | elapsed=122.2m
+[21:24:17]   eval @ 2048: ppl=12.209 | loss=2.5022
+[21:24:25]   eval @ 4096: ppl=11.398 | loss=2.4334
+[21:24:42]   eval @ 8192: ppl=10.682 | loss=2.3686
+[21:26:36] step= 3250 | phase=2 | seq=6144 | train_loss=2.3777 | lr_max=8.05e-06 | elapsed=124.6m
+[21:28:39] step= 3300 | phase=2 | seq=4096 | train_loss=2.4448 | lr_max=8.05e-06 | elapsed=126.7m
+[21:28:43]   eval @ 2048: ppl=12.210 | loss=2.5022
+[21:28:51]   eval @ 4096: ppl=11.398 | loss=2.4335
+[21:29:08]   eval @ 8192: ppl=10.684 | loss=2.3687
+[21:31:02] step= 3350 | phase=2 | seq=2048 | train_loss=2.3590 | lr_max=8.04e-06 | elapsed=129.1m
+[21:32:57] step= 3400 | phase=2 | seq=8192 | train_loss=2.3234 | lr_max=8.04e-06 | elapsed=131.0m
+[21:33:01]   eval @ 2048: ppl=12.210 | loss=2.5023
+[21:33:09]   eval @ 4096: ppl=11.398 | loss=2.4335
+[21:33:25]   eval @ 8192: ppl=10.681 | loss=2.3685
+[21:35:24] step= 3450 | phase=2 | seq=8192 | train_loss=2.1095 | lr_max=8.04e-06 | elapsed=133.4m
+[21:37:28] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_03500
+[21:37:28] \nEntering phase 3 | lr=5.00e-06 | frozen_sub_norm=[] | tail_weight=1.25
+[21:37:28] Freeze mask applied | frozen=0.00M | trainable=2412.82M
+[21:37:28] step= 3500 | phase=3 | seq=2048 | train_loss=2.4387 | lr_max=0.00e+00 | elapsed=135.5m
+[21:37:32]   eval @ 2048: ppl=12.209 | loss=2.5022
+[21:37:40]   eval @ 4096: ppl=11.398 | loss=2.4334
+[21:37:57]   eval @ 8192: ppl=10.680 | loss=2.3684
+[21:39:54] step= 3550 | phase=3 | seq=8192 | train_loss=2.4657 | lr_max=1.72e-07 | elapsed=137.9m
+[21:41:58] step= 3600 | phase=3 | seq=4096 | train_loss=2.3551 | lr_max=3.45e-07 | elapsed=140.0m
+[21:42:03]   eval @ 2048: ppl=12.206 | loss=2.5019
+[21:42:11]   eval @ 4096: ppl=11.396 | loss=2.4332
+[21:42:27]   eval @ 8192: ppl=10.680 | loss=2.3684
+[21:45:03] step= 3650 | phase=3 | seq=8192 | train_loss=2.3305 | lr_max=5.18e-07 | elapsed=143.1m
+[21:47:35] step= 3700 | phase=3 | seq=8192 | train_loss=2.4146 | lr_max=7.19e-07 | elapsed=145.6m
+[21:47:39]   eval @ 2048: ppl=12.210 | loss=2.5023
+[21:47:47]   eval @ 4096: ppl=11.400 | loss=2.4336
+[21:48:04]   eval @ 8192: ppl=10.681 | loss=2.3685
+[21:50:37] step= 3750 | phase=3 | seq=8192 | train_loss=2.2925 | lr_max=8.91e-07 | elapsed=148.6m
+[21:52:59] step= 3800 | phase=3 | seq=8192 | train_loss=2.4151 | lr_max=1.06e-06 | elapsed=151.0m
+[21:53:03]   eval @ 2048: ppl=12.210 | loss=2.5023
+[21:53:12]   eval @ 4096: ppl=11.398 | loss=2.4335
+[21:53:28]   eval @ 8192: ppl=10.680 | loss=2.3683
+[21:55:56] step= 3850 | phase=3 | seq=8192 | train_loss=2.4609 | lr_max=1.24e-06 | elapsed=154.0m
+[21:58:18] step= 3900 | phase=3 | seq=8192 | train_loss=2.4387 | lr_max=1.44e-06 | elapsed=156.3m
+[21:58:22]   eval @ 2048: ppl=12.212 | loss=2.5024
+[21:58:30]   eval @ 4096: ppl=11.401 | loss=2.4337
+[21:58:47]   eval @ 8192: ppl=10.681 | loss=2.3684
+[22:01:14] step= 3950 | phase=3 | seq=6144 | train_loss=2.3448 | lr_max=1.61e-06 | elapsed=159.3m
+[22:03:49] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_04000
+[22:03:51] step= 4000 | phase=3 | seq=6144 | train_loss=2.3854 | lr_max=1.78e-06 | elapsed=161.9m
+[22:03:56]   eval @ 2048: ppl=12.210 | loss=2.5023
+[22:04:03]   eval @ 4096: ppl=11.400 | loss=2.4336
+[22:04:20]   eval @ 8192: ppl=10.679 | loss=2.3683
+[22:06:52] step= 4050 | phase=3 | seq=8192 | train_loss=2.2947 | lr_max=1.96e-06 | elapsed=164.9m
+[22:09:23] step= 4100 | phase=3 | seq=8192 | train_loss=2.2416 | lr_max=2.16e-06 | elapsed=167.4m
+[22:09:27]   eval @ 2048: ppl=12.209 | loss=2.5022
+[22:09:35]   eval @ 4096: ppl=11.398 | loss=2.4335
+[22:09:52]   eval @ 8192: ppl=10.682 | loss=2.3685
+[22:12:20] step= 4150 | phase=3 | seq=8192 | train_loss=2.3033 | lr_max=2.33e-06 | elapsed=170.4m
+[22:14:49] step= 4200 | phase=3 | seq=8192 | train_loss=2.1232 | lr_max=2.50e-06 | elapsed=172.8m
+[22:14:53]   eval @ 2048: ppl=12.205 | loss=2.5019
+[22:15:01]   eval @ 4096: ppl=11.396 | loss=2.4333
+[22:15:18]   eval @ 8192: ppl=10.679 | loss=2.3683
+[22:17:41] step= 4250 | phase=3 | seq=6144 | train_loss=2.3804 | lr_max=2.67e-06 | elapsed=175.7m
+[22:20:05] step= 4300 | phase=3 | seq=8192 | train_loss=2.3279 | lr_max=2.88e-06 | elapsed=178.1m
+[22:20:09]   eval @ 2048: ppl=12.206 | loss=2.5019
+[22:20:17]   eval @ 4096: ppl=11.397 | loss=2.4333
+[22:20:34]   eval @ 8192: ppl=10.678 | loss=2.3682
+[22:22:56] step= 4350 | phase=3 | seq=6144 | train_loss=2.3751 | lr_max=3.05e-06 | elapsed=181.0m
+[22:25:29] step= 4400 | phase=3 | seq=8192 | train_loss=2.5130 | lr_max=3.22e-06 | elapsed=183.5m
+[22:25:33]   eval @ 2048: ppl=12.203 | loss=2.5017
+[22:25:41]   eval @ 4096: ppl=11.395 | loss=2.4331
+[22:25:58]   eval @ 8192: ppl=10.678 | loss=2.3682
+[22:28:29] step= 4450 | phase=3 | seq=8192 | train_loss=2.3564 | lr_max=3.39e-06 | elapsed=186.5m
+[22:31:07] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_04500
+[22:31:10] step= 4500 | phase=3 | seq=8192 | train_loss=2.6389 | lr_max=3.59e-06 | elapsed=189.2m
+[22:31:14]   eval @ 2048: ppl=12.206 | loss=2.5020
+[22:31:22]   eval @ 4096: ppl=11.397 | loss=2.4333
+[22:31:39]   eval @ 8192: ppl=10.679 | loss=2.3683
+[22:34:03] step= 4550 | phase=3 | seq=6144 | train_loss=2.3817 | lr_max=3.77e-06 | elapsed=192.1m
+[22:36:34] step= 4600 | phase=3 | seq=8192 | train_loss=2.2489 | lr_max=3.94e-06 | elapsed=194.6m
+[22:36:38]   eval @ 2048: ppl=12.214 | loss=2.5026
+[22:36:46]   eval @ 4096: ppl=11.402 | loss=2.4338
+[22:37:03]   eval @ 8192: ppl=10.680 | loss=2.3684
+[22:39:34] step= 4650 | phase=3 | seq=4096 | train_loss=2.2145 | lr_max=4.11e-06 | elapsed=197.6m
+[22:41:59] step= 4700 | phase=3 | seq=6144 | train_loss=2.4445 | lr_max=4.31e-06 | elapsed=200.0m
+[22:42:03]   eval @ 2048: ppl=12.211 | loss=2.5023
+[22:42:11]   eval @ 4096: ppl=11.402 | loss=2.4338
+[22:42:27]   eval @ 8192: ppl=10.679 | loss=2.3682
+[22:44:56] step= 4750 | phase=3 | seq=8192 | train_loss=2.3341 | lr_max=4.49e-06 | elapsed=203.0m
+[22:47:25] step= 4800 | phase=3 | seq=8192 | train_loss=2.4306 | lr_max=4.66e-06 | elapsed=205.4m
+[22:47:29]   eval @ 2048: ppl=12.205 | loss=2.5018
+[22:47:37]   eval @ 4096: ppl=11.395 | loss=2.4332
+[22:47:54]   eval @ 8192: ppl=10.680 | loss=2.3684
+[22:50:22] step= 4850 | phase=3 | seq=6144 | train_loss=2.5247 | lr_max=4.83e-06 | elapsed=208.4m
+[22:52:50] step= 4900 | phase=3 | seq=8192 | train_loss=2.3766 | lr_max=5.03e-06 | elapsed=210.9m
+[22:52:54]   eval @ 2048: ppl=12.207 | loss=2.5020
+[22:53:02]   eval @ 4096: ppl=11.398 | loss=2.4335
+[22:53:19]   eval @ 8192: ppl=10.679 | loss=2.3683
+[22:55:45] step= 4950 | phase=3 | seq=8192 | train_loss=2.4920 | lr_max=5.20e-06 | elapsed=213.8m
+[22:58:31] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_05000
+[22:58:34] step= 5000 | phase=3 | seq=8192 | train_loss=2.4197 | lr_max=5.38e-06 | elapsed=216.6m
+[22:58:38]   eval @ 2048: ppl=12.206 | loss=2.5019
+[22:58:46]   eval @ 4096: ppl=11.397 | loss=2.4333
+[22:59:03]   eval @ 8192: ppl=10.678 | loss=2.3682
+[23:01:26] step= 5050 | phase=3 | seq=8192 | train_loss=2.3302 | lr_max=5.55e-06 | elapsed=219.5m
+[23:03:59] step= 5100 | phase=3 | seq=8192 | train_loss=2.3545 | lr_max=5.75e-06 | elapsed=222.0m
+[23:04:03]   eval @ 2048: ppl=12.215 | loss=2.5026
+[23:04:12]   eval @ 4096: ppl=11.400 | loss=2.4336
+[23:04:28]   eval @ 8192: ppl=10.681 | loss=2.3684
+[23:07:02] step= 5150 | phase=3 | seq=4096 | train_loss=2.3080 | lr_max=5.75e-06 | elapsed=225.1m
+[23:09:34] step= 5200 | phase=3 | seq=4096 | train_loss=2.3951 | lr_max=5.75e-06 | elapsed=227.6m
+[23:09:38]   eval @ 2048: ppl=12.208 | loss=2.5021
+[23:09:46]   eval @ 4096: ppl=11.395 | loss=2.4332
+[23:10:03]   eval @ 8192: ppl=10.681 | loss=2.3685
+[23:12:30] step= 5250 | phase=3 | seq=8192 | train_loss=2.4247 | lr_max=5.75e-06 | elapsed=230.5m
+[23:14:59] step= 5300 | phase=3 | seq=8192 | train_loss=2.3028 | lr_max=5.75e-06 | elapsed=233.0m
+[23:15:03]   eval @ 2048: ppl=12.207 | loss=2.5020
+[23:15:11]   eval @ 4096: ppl=11.395 | loss=2.4332
+[23:15:28]   eval @ 8192: ppl=10.678 | loss=2.3682
+[23:17:52] step= 5350 | phase=3 | seq=8192 | train_loss=2.4637 | lr_max=5.75e-06 | elapsed=235.9m
+[23:20:16] step= 5400 | phase=3 | seq=4096 | train_loss=2.3774 | lr_max=5.75e-06 | elapsed=238.3m
+[23:20:21]   eval @ 2048: ppl=12.212 | loss=2.5024
+[23:20:29]   eval @ 4096: ppl=11.398 | loss=2.4334
+[23:20:45]   eval @ 8192: ppl=10.676 | loss=2.3680
+[23:23:15] step= 5450 | phase=3 | seq=6144 | train_loss=2.5031 | lr_max=5.75e-06 | elapsed=241.3m
+[23:25:50] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_05500
+[23:25:54] step= 5500 | phase=3 | seq=8192 | train_loss=2.3503 | lr_max=5.74e-06 | elapsed=243.9m
+[23:25:58]   eval @ 2048: ppl=12.202 | loss=2.5016
+[23:26:06]   eval @ 4096: ppl=11.394 | loss=2.4331
+[23:26:22]   eval @ 8192: ppl=10.679 | loss=2.3683
+[23:28:56] step= 5550 | phase=3 | seq=8192 | train_loss=2.2909 | lr_max=5.74e-06 | elapsed=247.0m
+[23:31:25] step= 5600 | phase=3 | seq=8192 | train_loss=2.4189 | lr_max=5.74e-06 | elapsed=249.5m
+[23:31:29]   eval @ 2048: ppl=12.205 | loss=2.5018
+[23:31:38]   eval @ 4096: ppl=11.395 | loss=2.4332
+[23:31:54]   eval @ 8192: ppl=10.679 | loss=2.3683
+[23:34:20] step= 5650 | phase=3 | seq=6144 | train_loss=2.3712 | lr_max=5.74e-06 | elapsed=252.4m
+[23:36:45] step= 5700 | phase=3 | seq=8192 | train_loss=2.3128 | lr_max=5.74e-06 | elapsed=254.8m
+[23:36:49]   eval @ 2048: ppl=12.205 | loss=2.5019
+[23:36:57]   eval @ 4096: ppl=11.394 | loss=2.4331
+[23:37:14]   eval @ 8192: ppl=10.679 | loss=2.3682
+[23:39:45] step= 5750 | phase=3 | seq=6144 | train_loss=2.4687 | lr_max=5.73e-06 | elapsed=257.8m
+[23:42:13] step= 5800 | phase=3 | seq=8192 | train_loss=2.3276 | lr_max=5.73e-06 | elapsed=260.3m
+[23:42:18]   eval @ 2048: ppl=12.210 | loss=2.5023
+[23:42:26]   eval @ 4096: ppl=11.396 | loss=2.4333
+[23:42:42]   eval @ 8192: ppl=10.680 | loss=2.3683
+[23:45:09] step= 5850 | phase=3 | seq=8192 | train_loss=2.2061 | lr_max=5.73e-06 | elapsed=263.2m
+[23:47:38] step= 5900 | phase=3 | seq=6144 | train_loss=2.4177 | lr_max=5.73e-06 | elapsed=265.7m
+[23:47:42]   eval @ 2048: ppl=12.203 | loss=2.5017
+[23:47:50]   eval @ 4096: ppl=11.394 | loss=2.4330
+[23:48:07]   eval @ 8192: ppl=10.675 | loss=2.3679
+[23:50:38] step= 5950 | phase=3 | seq=8192 | train_loss=2.4204 | lr_max=5.72e-06 | elapsed=268.7m
+[23:53:11] Checkpoint saved: bitnet_yarn_recipe_output/checkpoints/step_06000
+[23:53:11] \nFinal evaluation...
+[23:53:15] Final @ 2048: ppl=12.207 | loss=2.5020
+[23:53:23] Final @ 4096: ppl=11.394 | loss=2.4331
+[23:53:40] Final @ 8192: ppl=10.678 | loss=2.3682
+[23:53:51] Final model  : bitnet_yarn_recipe_output/final
+[23:53:51] Results JSON : bitnet_yarn_recipe_output/results_summary.json
+[23:53:51] Done.
+ 
