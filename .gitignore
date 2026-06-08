@@ -1,0 +1,22 @@
+# Large weights
+*.gguf
+*.safetensors
+*.zip
+*.rar
+*.bin
+
+# Virtual Environments
+venv/
+.env
+
+# Excluded code
+BitNet/
+
+# Random Text/Logs
+1773910906030_baker.txt
+1773910965663_safetensors.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
