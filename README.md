@@ -1,6 +1,6 @@
 # BitNet Context Expansion Experiments
 
-This repository contains my research and experiments with expanding the context window of BitNet from 4k to 8k (and attempting 16k), along with some exploration into mechanistic interpretability.
+This repository contains my research and experiments with expanding the context window of BitNet from 4k to 8k (and attempting 16k), along with some exploration into mechanistic interpretability. [With plenty of help from Gemini and Claude]
 
 ## Project Aims
 
