@@ -1,0 +1,17 @@
+{
+  "ppl_4k_base": 7.22359731694158,
+  "ppl_4k_after": 7.020140239807741,
+  "ppl_8k_base": 7.026838570073373,
+  "ppl_8k_after": 6.8134001330941505,
+  "delta_4k": -0.2034570771338391,
+  "delta_8k": -0.2134384369792226,
+  "verdict": "~ PARTIAL",
+  "total_steps": 10000,
+  "phase1_end": 2000,
+  "phase2_end": 7000,
+  "phase3_end": 10000,
+  "sft_dataset": "HuggingFaceH4/ultrachat_200k",
+  "context_dataset": "sedthh/gutenberg_english",
+  "yarn_bands": "32-52",
+  "scale_factor": 4.0
+}
